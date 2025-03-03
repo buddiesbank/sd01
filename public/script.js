@@ -166,6 +166,11 @@ async function stopRecording() {
 }
 
 // Initialize video player
+if (!video) {
+    console.error('Video element not found');
+}
+
+// Initialize video player
 video.addEventListener('timeupdate', () => {
     const currentTime = video.currentTime;
     

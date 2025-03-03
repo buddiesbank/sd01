@@ -12,7 +12,7 @@ let microphone;
 let audioStream;
 let silenceDetectionFrame;
 
-const videoPlayer = document.getElementById('videoPlayer');
+const video = document.getElementById('mainVideo');
 const recordingStatus = document.getElementById('recordingStatus');
 const recordingsList = document.getElementById('recordingsList');
 
@@ -141,7 +141,7 @@ async function startRecording() {
             await uploadRecording(audioBlob, timestamp);
             await cleanupAudio();
             disableRecording();
-            videoPlayer.play();
+            video.play();
             currentTimestampIndex++;
         };
 
@@ -166,13 +166,13 @@ async function stopRecording() {
 }
 
 // Initialize video player
-videoPlayer.addEventListener('timeupdate', () => {
-    const currentTime = videoPlayer.currentTime;
+video.addEventListener('timeupdate', () => {
+    const currentTime = video.currentTime;
     
     // Check if we've reached a pause timestamp
     if (currentTimestampIndex < pauseTimestamps.length && 
         currentTime >= pauseTimestamps[currentTimestampIndex]) {
-        videoPlayer.pause();
+        video.pause();
         startRecording();
     }
 });

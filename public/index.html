@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <video id="videoPlayer" controls>
+                <source src="sd01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="controls-container">
+            <div id="recordingStatus" class="recording-status"></div>
+        </div>
+
+        <div class="recordings-container">
+            <h2>Your Recordings</h2>
+            <div id="recordingsList" class="recordings-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

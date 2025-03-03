@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.recording-status {
+    font-size: 1.1rem;
+    color: #007AFF;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 122, 255, 0.1);
+    border-radius: 6px;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007AFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.recordings-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recordings-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.recordings-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.recording-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.timestamp-label {
+    min-width: 150px;
+    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.recording-item audio {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .video-container {
+        margin-bottom: 1rem;
+    }
+
+    .recording-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timestamp-label {
+        min-width: auto;
+    }
+} 
